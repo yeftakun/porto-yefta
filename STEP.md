@@ -8,20 +8,20 @@ Tujuan: membuat form `Get In Touch` bisa dikenali oleh Netlify saat deploy.
 
 Checklist:
 
-- [ ] Update form di `index.html` menjadi `name="contact"`.
-- [ ] Tambahkan `method="POST"`.
-- [ ] Tambahkan `data-netlify="true"`.
-- [ ] Tambahkan `netlify-honeypot="bot-field"`.
-- [ ] Tambahkan hidden input `form-name` dengan value `contact`.
-- [ ] Tambahkan honeypot field `bot-field`.
-- [ ] Tambahkan `required` untuk field penting:
+- [x] Update form di `index.html` menjadi `name="contact"`.
+- [x] Tambahkan `method="POST"`.
+- [x] Tambahkan `data-netlify="true"`.
+- [x] Tambahkan `netlify-honeypot="bot-field"`.
+- [x] Tambahkan hidden input `form-name` dengan value `contact`.
+- [x] Tambahkan honeypot field `bot-field`.
+- [x] Tambahkan `required` untuk field penting:
   - `email`
   - `message`
-- [ ] Pastikan field tetap memakai name yang jelas:
+- [x] Pastikan field tetap memakai name yang jelas:
   - `email`
   - `mobile`
   - `message`
-- [ ] Tambahkan `action="/thank-you.html"` agar user diarahkan ke halaman sukses setelah submit.
+- [x] Tambahkan `action="/thank-you.html"` agar user diarahkan ke halaman sukses setelah submit.
 
 Output tahap ini:
 
