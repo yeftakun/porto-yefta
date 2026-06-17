@@ -101,6 +101,7 @@ Checklist deploy:
   - `index.html`
   - `styles.css`
   - `thank-you.html`
+  - `netlify.toml`
   - `PLAN.md`
   - `STEP.md`
 - [ ] Push project ke GitHub repository.
@@ -109,8 +110,15 @@ Checklist deploy:
 - [ ] Pilih "Import an existing project".
 - [ ] Hubungkan ke GitHub repository.
 - [ ] Kosongkan build command.
-- [ ] Set publish directory ke root project.
+- [ ] Pastikan publish directory root project:
+  - dari dashboard: publish directory kosong atau `.`
+  - dari file config: `netlify.toml` berisi `publish = "."`
 - [ ] Deploy site.
+- [ ] Jika `thank-you.html` masih 404:
+  - buka Deploys di Netlify dashboard
+  - trigger "Clear cache and deploy site"
+  - pastikan deploy terbaru berasal dari branch yang benar
+  - buka `https://yeftaasyel.netlify.app/thank-you.html` langsung di browser
 
 Checklist Netlify Forms:
 
