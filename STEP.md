@@ -34,14 +34,14 @@ Tujuan: memberi feedback yang jelas setelah user mengirim pesan.
 
 Checklist:
 
-- [ ] Buat file `thank-you.html`.
-- [ ] Buat tampilan sederhana yang konsisten dengan desain portfolio:
+- [x] Buat file `thank-you.html`.
+- [x] Buat tampilan sederhana yang konsisten dengan desain portfolio:
   - background hitam
   - heading putih
   - body text abu-abu
   - tombol hijau untuk kembali ke homepage
-- [ ] Tambahkan link kembali ke `index.html`.
-- [ ] Tambahkan CSS untuk honeypot field:
+- [x] Tambahkan link kembali ke `index.html`.
+- [x] Tambahkan CSS untuk honeypot field:
 
 ```css
 .hidden-field {
@@ -49,8 +49,8 @@ Checklist:
 }
 ```
 
-- [ ] Jika styling halaman sukses tidak inline, tambahkan class CSS yang dibutuhkan di `styles.css`.
-- [ ] Test buka `thank-you.html` langsung di browser.
+- [x] Jika styling halaman sukses tidak inline, tambahkan class CSS yang dibutuhkan di `styles.css`.
+- [x] Test buka `thank-you.html` langsung di browser.
 
 Output tahap ini:
 
