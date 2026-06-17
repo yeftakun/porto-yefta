@@ -449,8 +449,28 @@
     <script>
       const contactForm = document.querySelector("#contact-form");
 
+      function getRecaptchaToken(form) {
+        const recaptchaResponse = form.querySelector(
+          'textarea[name="g-recaptcha-response"], input[name="g-recaptcha-response"]',
+        );
+
+        return recaptchaResponse?.value?.trim() || "";
+      }
+
       contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        const recaptchaToken = getRecaptchaToken(contactForm);
+
+        if (!recaptchaToken) {
+          alert("Please complete the reCAPTCHA verification before submitting.");
+          return;
+        }
 
         const formData = new FormData(contactForm);
 
