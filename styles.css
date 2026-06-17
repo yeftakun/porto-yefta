@@ -4,6 +4,7 @@
   --white: #ffffff;
   --ink: #080808;
   --muted: #9c9c9c;
+  --muted-on-light: #626262;
   --dark-muted: #777777;
   --line: #242424;
   --green: #3f9c00;
@@ -36,6 +37,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #72c72b;
+  outline-offset: 4px;
 }
 
 img {
@@ -336,7 +343,7 @@ img {
 
 .section-heading p {
   margin: 0;
-  color: var(--muted);
+  color: var(--muted-on-light);
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
   line-height: 1.6;
@@ -408,7 +415,7 @@ img {
 
 .case-copy p {
   margin: 0;
-  color: var(--muted);
+  color: var(--muted-on-light);
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
   line-height: 1.55;
@@ -539,7 +546,7 @@ img {
 .recent-card p {
   max-width: 452px;
   margin: 0;
-  color: var(--muted);
+  color: var(--muted-on-light);
   font-family: "Courier New", Courier, monospace;
   font-size: 17px;
   line-height: 1.6;
@@ -648,13 +655,19 @@ img {
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: #777777;
+  color: #626262;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
   border-color: #72c72b;
   box-shadow: 0 0 0 3px rgba(63, 156, 0, 0.2);
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+  outline: 3px solid #72c72b;
+  outline-offset: 2px;
 }
 
 .contact-submit {
@@ -980,7 +993,7 @@ img {
 
   .hero-copy h1 {
     margin-bottom: 18px;
-    font-size: clamp(34px, 10vw, 40px);
+    font-size: clamp(32px, 9vw, 36px);
   }
 
   .hero-copy p {

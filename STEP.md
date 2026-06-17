@@ -63,28 +63,28 @@ Tujuan: memastikan website siap sebelum masuk Netlify.
 
 Checklist desktop:
 
-- [ ] Navbar link `Get In Touch` menuju section `#contact`.
-- [ ] Form terlihat rapi di desktop.
-- [ ] Input email, mobile, dan message bisa diketik.
-- [ ] Tombol submit terlihat proporsional.
-- [ ] Sidebar mobile tidak mengganggu desktop navbar.
+- [x] Navbar link `Get In Touch` menuju section `#contact`.
+- [x] Form terlihat rapi di desktop.
+- [x] Input email, mobile, dan message bisa diketik.
+- [x] Tombol submit terlihat proporsional.
+- [x] Sidebar mobile tidak mengganggu desktop navbar.
 
 Checklist mobile:
 
-- [ ] Hamburger membuka sidebar.
-- [ ] Sidebar bisa ditutup lewat tombol close.
-- [ ] Sidebar bisa ditutup lewat overlay.
-- [ ] Link `Get In Touch` menutup sidebar dan menuju form.
-- [ ] Form tidak overflow pada width 375px atau 390px.
-- [ ] Textarea nyaman digunakan.
-- [ ] Tombol submit mudah ditekan.
+- [x] Hamburger membuka sidebar.
+- [x] Sidebar bisa ditutup lewat tombol close.
+- [x] Sidebar bisa ditutup lewat overlay.
+- [x] Link `Get In Touch` menutup sidebar dan menuju form.
+- [x] Form tidak overflow pada width 375px atau 390px.
+- [x] Textarea nyaman digunakan.
+- [x] Tombol submit mudah ditekan.
 
 Checklist aksesibilitas dasar:
 
-- [ ] Semua input punya label.
-- [ ] Tombol bisa difokus dengan keyboard.
-- [ ] Escape menutup sidebar.
-- [ ] Kontras teks tetap terbaca.
+- [x] Semua input punya label.
+- [x] Tombol bisa difokus dengan keyboard.
+- [x] Escape menutup sidebar.
+- [x] Kontras teks tetap terbaca.
 
 Output tahap ini:
 
