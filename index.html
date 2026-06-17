@@ -306,6 +306,7 @@
           </div>
 
           <form
+            id="contact-form"
             class="contact-form"
             name="contact"
             method="POST"
@@ -432,6 +433,33 @@
       }
 
       syncNavigationAccessibility();
+    </script>
+    <script>
+      const contactForm = document.querySelector("#contact-form");
+
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch("/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams(formData).toString(),
+          });
+
+          if (!response.ok) {
+            throw new Error("Form submission failed");
+          }
+
+          window.location.href = "/thank-you.html";
+        } catch (error) {
+          alert("Message failed to send. Please try again.");
+        }
+      });
     </script>
   </body>
 </html>
