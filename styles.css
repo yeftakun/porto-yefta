@@ -1278,3 +1278,10 @@ img {
     font-size: 14px;
   }
 }
+
+.recaptcha-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 12px 0 8px;
+}
