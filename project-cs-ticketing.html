@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Room Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="project-detail-page">
+    <header class="site-header" aria-label="Primary navigation">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-overlay" hidden></div>
+
+      <div class="nav-shell" id="primary-navigation">
+        <button class="nav-close" type="button" aria-label="Close navigation">
+          <span aria-hidden="true">x</span>
+        </button>
+
+        <a class="nav-link" href="index.html#home">Home</a>
+        <a class="nav-link" href="index.html#about">About</a>
+        <a class="nav-link" href="index.html#projects">Projects</a>
+        <a class="nav-link" href="index.html#skills">Skills</a>
+        <a class="nav-link" href="index.html#contact">Contact</a>
+
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Behance">Be</a>
+          <a href="#" aria-label="X">X</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-detail-header">
+        <div class="section-container project-detail-header-grid">
+          <div>
+            <span class="project-tag tag-blue">Booking System</span>
+            <h1>Book Room</h1>
+            <p class="project-detail-summary">
+              A room booking concept for checking availability, requesting
+              reservations, and managing scheduled room usage.
+            </p>
+          </div>
+
+          <div class="project-detail-actions">
+            <a class="cta-button cta-green" href="index.html#projects">
+              Back to Projects <span aria-hidden="true">&gt;</span>
+            </a>
+            <a class="detail-link-button" href="#">GitHub</a>
+            <a class="detail-link-button" href="#">Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-gallery-section" aria-label="Project screenshots">
+        <div class="section-container">
+          <div class="project-gallery" data-gallery>
+            <div class="project-gallery-viewport">
+              <div class="project-gallery-track">
+                <figure class="project-gallery-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85"
+                    alt="Placeholder screenshot for room availability"
+                  />
+                  <figcaption>Room availability placeholder</figcaption>
+                </figure>
+                <figure class="project-gallery-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=85"
+                    alt="Placeholder screenshot for booking request form"
+                  />
+                  <figcaption>Reservation request placeholder</figcaption>
+                </figure>
+                <figure class="project-gallery-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=85"
+                    alt="Placeholder screenshot for schedule management"
+                  />
+                  <figcaption>Schedule management placeholder</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="project-gallery-controls">
+              <button type="button" data-gallery-prev aria-label="Previous screenshot">
+                &lt;
+              </button>
+              <div class="project-gallery-dots" role="tablist" aria-label="Screenshot slides">
+                <button type="button" data-gallery-dot aria-label="Show screenshot 1"></button>
+                <button type="button" data-gallery-dot aria-label="Show screenshot 2"></button>
+                <button type="button" data-gallery-dot aria-label="Show screenshot 3"></button>
+              </div>
+              <button type="button" data-gallery-next aria-label="Next screenshot">
+                &gt;
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-container project-detail-content">
+        <section class="project-detail-section">
+          <h2>Overview</h2>
+          <p>
+            Book Room is a project detail placeholder for a reservation system.
+            It can later describe users, approval rules, booking constraints,
+            and the final flow in more concrete detail.
+          </p>
+        </section>
+
+        <section class="project-detail-section">
+          <h2>Problem / Background</h2>
+          <p>
+            Shared rooms can be difficult to coordinate when requests are handled
+            manually. The project explores a cleaner way to show availability
+            and keep reservation records organized.
+          </p>
+        </section>
+
+        <section class="project-detail-section">
+          <h2>Solution / Features</h2>
+          <div class="feature-grid">
+            <article>
+              <h3>Availability View</h3>
+              <p>Placeholder for room list, date selection, and schedule status.</p>
+            </article>
+            <article>
+              <h3>Booking Request</h3>
+              <p>Placeholder for user request details and validation rules.</p>
+            </article>
+            <article>
+              <h3>Admin Review</h3>
+              <p>Placeholder for approval, rejection, and schedule updates.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="project-detail-section">
+          <h2>Tech Stack</h2>
+          <div class="tech-stack-list">
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>REST API</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </section>
+
+        <section class="project-detail-section">
+          <h2>Challenges / Notes</h2>
+          <p>
+            Placeholder notes for avoiding schedule conflicts, keeping the
+            interface easy to scan, and handling reservation state clearly.
+          </p>
+        </section>
+
+        <section class="project-detail-section">
+          <h2>Outcome / Result</h2>
+          <p>
+            Placeholder result text for explaining how the booking workflow can
+            reduce manual coordination and make room usage easier to track.
+          </p>
+        </section>
+
+        <nav class="project-bottom-nav" aria-label="Project navigation">
+          <a class="detail-link-button" href="project-printorder.html">Previous Project</a>
+          <a class="cta-button cta-teal" href="project-ac-lapboard.html">
+            Next Project <span aria-hidden="true">&gt;</span>
+          </a>
+        </nav>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
