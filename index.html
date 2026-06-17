@@ -311,6 +311,7 @@
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             netlify-honeypot="bot-field"
             action="/thank-you.html"
           >
@@ -356,6 +357,12 @@
                 required
               ></textarea>
             </label>
+
+            <div data-netlify-recaptcha="true"></div>
+
+            <button class="cta-button cta-green contact-submit" type="submit">
+              Submit <span aria-hidden="true">></span>
+            </button>
 
             <button class="cta-button cta-green contact-submit" type="submit">
               Submit <span aria-hidden="true">></span>
