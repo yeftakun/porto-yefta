@@ -12,11 +12,11 @@
     />
     <meta name="author" content="Yefta Yosia Asyel" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://yeftaasyel.netlify.app/" />
+    <link rel="canonical" href="https://yeftakun.github.io/porto-yefta/" />
 
     <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yeftaasyel.netlify.app/" />
+    <meta property="og:url" content="https://yeftakun.github.io/porto-yefta/" />
     <meta property="og:title" content="Yefta Asyel" />
     <meta
       property="og:description"
@@ -24,7 +24,7 @@
     />
     <meta
       property="og:image"
-      content="https://yeftaasyel.netlify.app/assets/preview.png"
+      content="https://yeftakun.github.io/porto-yefta/assets/preview.png"
     />
     <meta property="og:image:alt" content="Yefta Yosia Asyel portfolio preview" />
     <meta property="og:site_name" content="Yefta Yosia Asyel Portfolio" />
@@ -32,7 +32,7 @@
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://yeftaasyel.netlify.app/" />
+    <meta name="twitter:url" content="https://yeftakun.github.io/porto-yefta/" />
     <meta name="twitter:title" content="Yefta Asyel" />
     <meta
       name="twitter:description"
@@ -40,13 +40,12 @@
     />
     <meta
       name="twitter:image"
-      content="https://yeftaasyel.netlify.app/assets/preview.png"
+      content="https://yeftakun.github.io/porto-yefta/assets/preview.png"
     />
     <meta name="twitter:image:alt" content="Yefta Yosia Asyel portfolio preview" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/assets/favicon.ico" />
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -373,71 +372,47 @@
             <h2>Contact</h2>
             <p>
               Have a project idea, collaboration request, or problem to discuss?
+              Reach me directly through one of these channels.
             </p>
           </div>
 
           <div class="contact-card">
-            <form
-              id="contact-form"
-              class="contact-form"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-recaptcha="true"
-              netlify-honeypot="bot-field"
-              action="/thank-you.html"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <input
-                type="hidden"
-                name="subject"
-                value="New message from portfolio contact form"
-              />
-              <p class="hidden-field" hidden>
-                <label>
-                  Do not fill this out:
-                  <input name="bot-field" tabindex="-1" autocomplete="off" />
-                </label>
-              </p>
-
-              <label class="form-field">
-                <span>Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Please enter your email"
-                  autocomplete="email"
-                  required
-                />
-              </label>
-
-              <label class="form-field">
-                <span>Mobile</span>
-                <input
-                  type="tel"
-                  name="mobile"
-                  placeholder="Enter mobile"
-                  autocomplete="tel"
-                />
-              </label>
-
-              <label class="form-field">
-                <span>Message</span>
-                <textarea
-                  name="message"
-                  placeholder="Enter your message"
-                  required
-                ></textarea>
-              </label>
-
-              <div class="recaptcha-wrapper">
-                <div data-netlify-recaptcha="true"></div>
-              </div>
-
-              <button class="cta-button cta-green contact-submit" type="submit">
-                Submit <span aria-hidden="true">></span>
+            <div class="contact-cta-list" aria-label="Contact options">
+              <button
+                class="contact-cta contact-cta-email"
+                type="button"
+                data-contact-target="email"
+                aria-label="Email"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M4 6h16v12H4z" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
               </button>
-            </form>
+              <button
+                class="contact-cta contact-cta-whatsapp"
+                type="button"
+                data-contact-target="whatsapp"
+                aria-label="WhatsApp"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.1A8 8 0 1 1 20 11.5z" />
+                  <path d="M9.2 7.7c-.2-.4-.4-.4-.7-.4H8c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.9 4.5 3.9 2.2.8 2.7.6 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.4l-1.6-.8c-.3-.1-.5-.1-.7.2l-.7.9c-.1.2-.3.2-.5.1-.3-.1-1-.4-1.9-1.2-.7-.7-1.2-1.5-1.3-1.7-.1-.2 0-.4.1-.5l.5-.5c.1-.1.2-.3.3-.4.1-.2.1-.3 0-.5z" />
+                </svg>
+              </button>
+              <button
+                class="contact-cta contact-cta-instagram"
+                type="button"
+                data-contact-target="instagram"
+                aria-label="Instagram"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1.2" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -528,51 +503,42 @@
       syncNavigationAccessibility();
     </script>
     <script>
-      const contactForm = document.querySelector("#contact-form");
+      const contactTargets = {
+        email: [
+          109, 97, 105, 108, 116, 111, 58, 121, 101, 102, 116, 97, 107, 117,
+          110, 51, 52, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109,
+        ],
+        whatsapp: [
+          104, 116, 116, 112, 115, 58, 47, 47, 119, 97, 46, 109, 101, 47, 54,
+          50, 56, 53, 55, 55, 53, 52, 55, 49, 51, 48, 56,
+        ],
+        instagram: [
+          104, 116, 116, 112, 115, 58, 47, 47, 119, 119, 119, 46, 105, 110,
+          115, 116, 97, 103, 114, 97, 109, 46, 99, 111, 109, 47, 121, 101,
+          102, 116, 97, 97, 115, 121, 101, 108, 95, 47,
+        ],
+      };
 
-      function getRecaptchaToken(form) {
-        const recaptchaResponse = form.querySelector(
-          'textarea[name="g-recaptcha-response"], input[name="g-recaptcha-response"]',
-        );
+      document
+        .querySelectorAll("[data-contact-target]")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            const target = contactTargets[button.dataset.contactTarget];
 
-        return recaptchaResponse?.value?.trim() || "";
-      }
+            if (!target) {
+              return;
+            }
 
-      contactForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
+            const url = String.fromCharCode(...target);
 
-        if (!contactForm.checkValidity()) {
-          contactForm.reportValidity();
-          return;
-        }
+            if (button.dataset.contactTarget === "email") {
+              window.location.href = url;
+              return;
+            }
 
-        const recaptchaToken = getRecaptchaToken(contactForm);
-
-        if (!recaptchaToken) {
-          alert("Please complete the reCAPTCHA verification before submitting.");
-          return;
-        }
-
-        const formData = new FormData(contactForm);
-
-        try {
-          const response = await fetch("/", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams(formData).toString(),
+            window.open(url, "_blank", "noopener,noreferrer");
           });
-
-          if (!response.ok) {
-            throw new Error("Form submission failed");
-          }
-
-          window.location.href = "/thank-you.html";
-        } catch (error) {
-          alert("Message failed to send. Please try again.");
-        }
-      });
+        });
     </script>
   </body>
 </html>
