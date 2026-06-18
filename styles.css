@@ -108,17 +108,30 @@ img {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 26px;
-  font-weight: 800;
+  gap: 24px;
   color: #656565;
 }
 
 .social-links a {
-  min-width: 26px;
-  text-align: center;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: color 160ms ease;
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: currentColor;
+}
+
+.social-links a[aria-label="Instagram"] svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
 
 .social-links a:hover,
@@ -673,7 +686,6 @@ img {
 
   .social-links {
     gap: 24px;
-    font-size: 23px;
   }
 
   .hero-grid {
@@ -702,7 +714,6 @@ img {
     width: 100%;
     margin-left: 0;
     justify-content: flex-start;
-    font-size: 22px;
   }
 
   .hero-section {
@@ -869,11 +880,16 @@ img {
     border-top: 1px solid var(--line);
     justify-content: flex-start;
     gap: 22px;
-    font-size: 22px;
   }
 
   .social-links a {
-    min-width: 20px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-links svg {
+    width: 22px;
+    height: 22px;
   }
 
   .hero-section {
