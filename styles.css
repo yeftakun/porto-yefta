@@ -188,6 +188,10 @@ img {
   line-height: 1.45;
 }
 
+.hero-copy .hero-description {
+  margin-bottom: 40px;
+}
+
 .cta-button {
   width: fit-content;
   min-height: 47px;
@@ -217,6 +221,7 @@ img {
   margin-top: 28px;
   padding: 0 32px;
   font-size: 19px;
+  margin-bottom: 50px;
 }
 
 .cta-button:hover,
@@ -299,7 +304,7 @@ img {
 .about-section {
   background: var(--black);
   color: var(--white);
-  padding: 72px 0 80px;
+  padding: 86px 0 92px;
 }
 
 .about-section .section-container,
@@ -308,33 +313,67 @@ img {
   width: min(var(--content-container), calc(100% - 48px));
 }
 
-.about-section .section-heading h2,
 .skills-section .section-heading h2 {
   color: var(--white);
 }
 
-.about-section .section-heading p,
 .skills-section .section-heading p {
   color: var(--muted);
 }
 
-.about-section .section-heading {
-  margin-bottom: 46px;
-}
-
 .about-layout {
   display: grid;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-.about-copy {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+.about-profile {
+  min-width: 0;
 }
 
-.about-copy p {
+.about-image-wrap {
+  width: 100%;
+  aspect-ratio: 5 / 4.8;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: var(--panel);
+  overflow: hidden;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-info {
+  min-width: 0;
+}
+
+.about-social-title {
+  margin: 0 0 14px;
+  color: var(--green);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-info h2 {
+  max-width: 640px;
+  margin: 0 0 20px;
+  color: var(--white);
+  font-size: clamp(34px, 4vw, 46px);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.about-info > p {
+  max-width: 680px;
   margin: 0;
   color: var(--muted);
   font-family: "Courier New", Courier, monospace;
@@ -342,10 +381,80 @@ img {
   line-height: 1.6;
 }
 
+.about-info-list {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.about-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.about-info-item svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: #72c72b;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.about-social {
+  margin-top: 30px;
+}
+
+.about-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.about-social-link {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.about-social-link svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: currentColor;
+}
+
+.about-social-link[aria-label="Instagram"] svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.about-social-link:hover,
+.about-social-link:focus-visible {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
 .about-highlight-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 
 .about-card,
@@ -356,8 +465,8 @@ img {
 }
 
 .about-card {
-  min-height: 142px;
-  padding: 24px 24px;
+  min-height: 138px;
+  padding: 24px;
 }
 
 .about-card h3,
@@ -491,7 +600,7 @@ img {
 
 .project-image {
   width: 100%;
-  aspect-ratio: 526 / 354;
+  aspect-ratio: 5 / 4;
   border-radius: 6px;
   object-fit: cover;
   box-shadow: 0 18px 48px rgba(8, 8, 8, 0.06);
@@ -748,6 +857,14 @@ img {
     gap: 34px;
   }
 
+  .about-layout {
+    align-items: start;
+  }
+
+  .about-image-wrap {
+    max-width: 520px;
+  }
+
   .project-row,
   .project-row-reverse {
     margin-top: 82px;
@@ -994,18 +1111,39 @@ img {
   }
 
   .section-heading p,
-  .about-copy p,
+  .about-info > p,
   .project-copy p {
     font-size: 15px;
     line-height: 1.6;
   }
 
   .about-layout,
-  .about-copy,
   .about-highlight-grid,
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .about-layout {
+    margin-bottom: 28px;
+  }
+
+  .about-image-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+    aspect-ratio: 5 / 4.8;
+  }
+
+  .about-info h2 {
+    font-size: 30px;
+  }
+
+  .about-info-list {
+    margin-top: 22px;
+  }
+
+  .about-social {
+    margin-top: 24px;
   }
 
   .about-card,
@@ -1065,7 +1203,7 @@ img {
   }
 
   .project-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 5 / 4;
     border-radius: 5px;
   }
 
@@ -1259,7 +1397,7 @@ img {
 
 .project-gallery-slide img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 5 / 4;
   object-fit: cover;
 }
 
@@ -1463,7 +1601,7 @@ img {
   }
 
   .project-gallery-slide img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 4;
   }
 
   .project-gallery-slide figcaption {
