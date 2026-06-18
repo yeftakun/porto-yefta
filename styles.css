@@ -725,23 +725,35 @@ img {
 }
 
 .contact-footer {
-  min-height: 120px;
+  min-height: 92px;
   margin-top: 84px;
+  padding: 24px;
   background: var(--panel);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  text-align: center;
 }
 
 .contact-footer p {
   margin: 0;
   color: var(--muted);
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.contact-footer span {
-  color: #ff3f36;
+.contact-footer a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.contact-footer a:hover,
+.contact-footer a:focus-visible {
+  color: #72c72b;
 }
 
 .thank-you-page {
@@ -1254,10 +1266,12 @@ img {
   .contact-footer {
     min-height: 86px;
     margin-top: 72px;
+    padding: 22px 16px;
   }
 
   .contact-footer p {
-    font-size: 16px;
+    width: 100%;
+    font-size: 13px;
   }
 
   .success-shell {
