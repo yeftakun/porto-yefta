@@ -333,67 +333,69 @@
             </p>
           </div>
 
-          <form
-            id="contact-form"
-            class="contact-form"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
-            netlify-honeypot="bot-field"
-            action="/thank-you.html"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <input
-              type="hidden"
-              name="subject"
-              value="New message from portfolio contact form"
-            />
-            <p class="hidden-field" hidden>
-              <label>
-                Do not fill this out:
-                <input name="bot-field" tabindex="-1" autocomplete="off" />
+          <div class="contact-card">
+            <form
+              id="contact-form"
+              class="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              netlify-honeypot="bot-field"
+              action="/thank-you.html"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input
+                type="hidden"
+                name="subject"
+                value="New message from portfolio contact form"
+              />
+              <p class="hidden-field" hidden>
+                <label>
+                  Do not fill this out:
+                  <input name="bot-field" tabindex="-1" autocomplete="off" />
+                </label>
+              </p>
+
+              <label class="form-field">
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Please enter your email"
+                  autocomplete="email"
+                  required
+                />
               </label>
-            </p>
 
-            <label class="form-field">
-              <span>Email</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="Please enter your email"
-                autocomplete="email"
-                required
-              />
-            </label>
+              <label class="form-field">
+                <span>Mobile</span>
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="Enter mobile"
+                  autocomplete="tel"
+                />
+              </label>
 
-            <label class="form-field">
-              <span>Mobile</span>
-              <input
-                type="tel"
-                name="mobile"
-                placeholder="Enter mobile"
-                autocomplete="tel"
-              />
-            </label>
+              <label class="form-field">
+                <span>Message</span>
+                <textarea
+                  name="message"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </label>
 
-            <label class="form-field">
-              <span>Message</span>
-              <textarea
-                name="message"
-                placeholder="Enter your message"
-                required
-              ></textarea>
-            </label>
+              <div class="recaptcha-wrapper">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
 
-            <div class="recaptcha-wrapper">
-              <div data-netlify-recaptcha="true"></div>
-            </div>
-
-            <button class="cta-button cta-green contact-submit" type="submit">
-              Submit <span aria-hidden="true">></span>
-            </button>
-          </form>
+              <button class="cta-button cta-green contact-submit" type="submit">
+                Submit <span aria-hidden="true">></span>
+              </button>
+            </form>
+          </div>
         </div>
 
         <footer class="contact-footer">
