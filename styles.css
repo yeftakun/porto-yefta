@@ -41,6 +41,46 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.reveal {
+  transition:
+    opacity 620ms ease,
+    transform 620ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.animations-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.animations-ready .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -91,13 +131,33 @@ img {
 }
 
 .nav-link {
+  position: relative;
   white-space: nowrap;
   transition: color 160ms ease;
 }
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: #72c72b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
 .nav-link:hover,
-.nav-link:focus-visible {
+.nav-link:focus-visible,
+.nav-link-active {
   color: var(--white);
+}
+
+.nav-link-active::after {
+  transform: scaleX(1);
 }
 
 .social-links {
@@ -114,7 +174,9 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 160ms ease;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
 }
 
 .social-links svg {
@@ -133,6 +195,7 @@ img {
 .social-links a:hover,
 .social-links a:focus-visible {
   color: var(--white);
+  transform: translateY(-2px);
 }
 
 .hero-section {
@@ -166,6 +229,9 @@ img {
   font-size: clamp(40px, 3.4vw, 50px);
   line-height: 1.05;
   font-weight: 800;
+  opacity: 0;
+  animation: fadeUp 640ms ease forwards;
+  animation-delay: 80ms;
 }
 
 .hero-copy p {
@@ -183,10 +249,16 @@ img {
   font-size: 19px;
   font-weight: 700;
   line-height: 1.45;
+  opacity: 0;
+  animation: fadeUp 640ms ease forwards;
+  animation-delay: 220ms;
 }
 
 .hero-copy .hero-description {
   margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 640ms ease forwards;
+  animation-delay: 340ms;
 }
 
 .cta-button {
@@ -219,12 +291,25 @@ img {
   padding: 0 32px;
   font-size: 19px;
   margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeUp 640ms ease forwards;
+  animation-delay: 460ms;
+}
+
+.cta-button span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform 180ms ease;
 }
 
 .cta-button:hover,
 .cta-button:focus-visible {
   transform: translateY(-2px);
   filter: brightness(1.04);
+}
+
+.cta-button:hover span[aria-hidden="true"],
+.cta-button:focus-visible span[aria-hidden="true"] {
+  transform: translateX(4px);
 }
 
 .cta-green {
@@ -255,6 +340,11 @@ img {
   border-radius: 50%;
   overflow: hidden;
   background: #27342e;
+  opacity: 0;
+  animation:
+    fadeIn 520ms ease forwards,
+    fadeUp 680ms ease forwards;
+  animation-delay: 560ms;
 }
 
 .portrait-wrap img {
@@ -262,6 +352,12 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  transition: transform 220ms ease;
+}
+
+.portrait-wrap:hover img,
+.portrait-wrap:focus-within img {
+  transform: scale(1.03);
 }
 
 .focus-areas {
@@ -296,6 +392,22 @@ img {
   font-weight: 800;
   line-height: 1.25;
   text-align: center;
+  transition:
+    opacity 620ms ease,
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.focus-card:hover,
+.focus-card:focus-visible {
+  border-color: #4a4a4a;
+  color: #f1f1f1;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
 }
 
 .about-section {
@@ -345,6 +457,12 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  transition: transform 220ms ease;
+}
+
+.about-image-wrap:hover .about-image,
+.about-image-wrap:focus-within .about-image {
+  transform: scale(1.03);
 }
 
 .about-info {
@@ -459,6 +577,13 @@ img {
   border: 1px solid #3a3a3a;
   border-radius: 5px;
   background: rgba(8, 8, 8, 0.24);
+  transition:
+    opacity 620ms ease,
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .about-card {
@@ -482,6 +607,14 @@ img {
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.about-card:hover,
+.skill-card:hover {
+  border-color: #555555;
+  background: rgba(17, 17, 17, 0.72);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
 .project-section {
@@ -519,6 +652,10 @@ img {
   justify-content: space-between;
   gap: 58px;
   margin-top: 94px;
+  transition:
+    opacity 620ms ease,
+    transform 180ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .section-heading + .project-row {
@@ -601,6 +738,14 @@ img {
   border-radius: 6px;
   object-fit: cover;
   box-shadow: 0 18px 48px rgba(8, 8, 8, 0.06);
+  transition:
+    box-shadow 180ms ease,
+    transform 220ms ease;
+}
+
+.project-image:hover {
+  box-shadow: 0 22px 56px rgba(8, 8, 8, 0.1);
+  transform: scale(1.02);
 }
 
 .skills-section {
@@ -1237,6 +1382,33 @@ img {
     min-height: 50px;
     margin-top: 26px;
     font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .animations-ready .reveal,
+  .animations-ready .reveal-visible,
+  .hero-copy h1,
+  .hero-copy .hero-subheading,
+  .hero-copy .hero-description,
+  .hero-copy .cta-button,
+  .portrait-wrap {
+    opacity: 1;
+    transform: none;
   }
 }
 
