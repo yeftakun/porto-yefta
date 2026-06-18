@@ -848,7 +848,7 @@ img {
 
 @media (max-width: 640px) {
   .section-container {
-    width: min(var(--container), calc(100% - 32px));
+    width: min(var(--container), calc(100% - 28px));
   }
 
   .hero-section .section-container,
@@ -856,7 +856,7 @@ img {
   .project-section .section-container,
   .skills-section .section-container,
   .contact-section .section-container {
-    width: min(var(--content-container), calc(100% - 32px));
+    width: min(var(--content-container), calc(100% - 28px));
   }
 
   .site-header {
@@ -968,12 +968,12 @@ img {
   }
 
   .hero-section {
-    padding-bottom: 44px;
+    padding-bottom: 34px;
   }
 
   .hero-grid {
-    padding-top: 34px;
-    gap: 26px;
+    padding-top: 24px;
+    gap: 20px;
     text-align: center;
   }
 
@@ -982,108 +982,120 @@ img {
   }
 
   .hero-copy h1 {
-    margin-bottom: 18px;
-    font-size: clamp(32px, 9vw, 36px);
+    margin-bottom: 14px;
+    font-size: clamp(28px, 8vw, 32px);
   }
 
   .hero-copy p {
     max-width: 100%;
-    font-size: 16px;
-    line-height: 1.55;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .hero-copy .hero-subheading {
-    font-size: 17px;
+    margin-bottom: 10px;
+    font-size: 15px;
   }
 
   .hero-copy .cta-button {
     width: 100%;
-    min-height: 56px;
-    margin-top: 26px;
-    padding: 0 22px;
-    font-size: 16px;
+    min-height: 48px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+    padding: 0 18px;
+    font-size: 14px;
   }
 
   .portrait-wrap {
-    width: min(220px, 64vw);
+    width: min(190px, 58vw);
     justify-self: center;
     order: -1;
   }
 
   .focus-areas {
-    margin-top: 28px;
+    margin-top: 10px;
   }
 
   .focus-areas > p {
-    margin-bottom: 14px;
-    font-size: 15px;
-    text-align: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-align: left;
   }
 
   .focus-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 2px;
+    scrollbar-width: none;
   }
 
   .focus-card {
-    min-height: 58px;
-    padding: 10px 12px;
-    font-size: 14px;
+    min-height: 32px;
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: #d8d8d8;
+    background: #111111;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
   }
 
-  .focus-card:last-child {
-    grid-column: 1 / -1;
+  .focus-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .about-section {
-    padding: 56px 0 72px;
+    padding: 48px 0 62px;
   }
 
   .project-section,
   .skills-section {
-    padding: 56px 0 82px;
+    padding: 48px 0 64px;
   }
 
   .contact-section {
-    padding: 56px 0 0;
+    padding: 48px 0 0;
   }
 
   .section-heading {
     max-width: 100%;
-    margin-bottom: 42px;
+    margin-bottom: 30px;
     text-align: left;
   }
 
   .section-heading h2 {
-    font-size: 34px;
+    margin-bottom: 10px;
+    font-size: 30px;
   }
 
   .contact-section .section-heading {
-    margin-bottom: 38px;
+    margin-bottom: 32px;
     text-align: center;
   }
 
   .contact-section .section-heading p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .contact-card {
-    padding: 20px;
+    padding: 18px;
   }
 
   .section-heading p,
   .about-info > p,
   .project-copy p {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .about-layout,
-  .about-highlight-grid,
-  .skills-grid {
+  .about-highlight-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .about-layout {
@@ -1097,37 +1109,58 @@ img {
   }
 
   .about-info h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .about-info-list {
-    margin-top: 22px;
+    margin-top: 18px;
   }
 
   .about-social {
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .about-card,
   .skill-card {
     min-height: auto;
-    padding: 24px;
+    padding: 18px;
   }
 
   .about-card h3,
   .skill-card h3 {
-    font-size: 20px;
+    margin-bottom: 9px;
+    font-size: 18px;
   }
 
   .about-card p,
   .skill-card p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 14px 12px;
+  }
+
+  .skill-card h3 {
     font-size: 15px;
+    line-height: 1.15;
   }
 
   .project-row,
   .project-row-reverse {
-    gap: 22px;
-    margin-top: 62px;
+    gap: 14px;
+    margin-top: 18px;
+    padding: 14px;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(8, 8, 8, 0.06);
   }
 
   .section-heading + .project-row {
@@ -1150,23 +1183,32 @@ img {
   }
 
   .project-copy h3 {
-    margin: 18px 0 10px;
-    font-size: 25px;
+    margin: 14px 0 8px;
+    font-size: 21px;
   }
 
   .project-tag {
-    min-height: 24px;
-    padding: 6px 10px;
-    font-size: 12px;
+    min-height: 22px;
+    padding: 5px 9px;
+    font-size: 11px;
   }
 
   .project-stack {
-    font-size: 14px !important;
+    margin-top: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .project-copy .cta-button {
+    min-height: 44px;
+    margin-top: 18px;
+    font-size: 13px;
   }
 
   .project-image {
     aspect-ratio: 5 / 4;
-    border-radius: 5px;
+    border-radius: 6px;
+    box-shadow: none;
   }
 
   .contact-cta {
